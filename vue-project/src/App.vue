@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import CounterButton from './components/CounterButton.vue'
+import PlanPicker from './components/PlanPicker.vue'
+
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="content">
+    <h1 class="title">Coffee Plans</h1>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+    <h2 class="subtitle">We travel the world to source the very best single origin coffee for you</h2>
 
-  <RouterView />
+
+    <PlanPicker />
+
+
+  </div>
 </template>
 
 <style scoped>
