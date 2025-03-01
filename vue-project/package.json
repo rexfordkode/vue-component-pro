@@ -15,8 +15,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
     "D": "^1.0.0",
     "pinia": "^3.0.1",
+    "tailwindcss": "^4.0.9",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
@@ -32,6 +34,7 @@
     "@vue/eslint-config-typescript": "^14.4.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
+    "daisyui": "^5.0.0",
     "eslint": "^9.20.1",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-vue": "^9.32.0",

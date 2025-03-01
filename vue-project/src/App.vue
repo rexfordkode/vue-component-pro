@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import CounterButton from './components/CounterButton.vue'
 import PlanPicker from './components/PlanPicker.vue'
+import FancyButton from './components/FancyButton.vue'
+import GithubCard from './components/GithubCard.vue'
+import { ref, } from 'vue'
+// const show = ref(true)
+
 
 
 </script>
@@ -8,14 +13,11 @@ import PlanPicker from './components/PlanPicker.vue'
 <template>
 
   <div class="content">
-    <h1 class="title">Coffee Plans</h1>
 
-    <h2 class="subtitle">We travel the world to source the very best single origin coffee for you</h2>
-
-
-    <PlanPicker />
-
-
+    <GithubCard username="rexfordkode"></GithubCard>
+    <GithubCard username="eodAmalitech"></GithubCard>
+    <GithubCard username="qambongo"></GithubCard>
+    <!-- <PlanPicker /> -->
   </div>
 </template>
 

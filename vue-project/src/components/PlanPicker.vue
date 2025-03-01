@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import CoffeePlan from './CoffeePlan.vue'
 const plans = ref([
     { name: 'The Curious' },
@@ -16,10 +16,11 @@ function handleSelectedCoffeePlan(name: string) {
 </script>
 <template>
 
-    <div class="plans">
+    <div ref="plansWrapper" class=" plans">
         <div class="selected-plan" v-if="selectedCoffeePlan">
             {{ selectedCoffeePlan }}
         </div>
+
         <CoffeePlan v-for="plan in plans" :name="plan.name" @click="handleSelectedCoffeePlan(plan.name)"
             :selected="plan === selectedCoffeePlan" :key="plan.name" />
     </div>
