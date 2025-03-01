@@ -1,17 +1,24 @@
 <script setup lang="ts">
-const props = defineProps<{
+const props = defineProps({
     name: {
-        type: string, default: 'The Curious'
+        type: String, default: 'The Curious', validator(value: string) { return value.startsWith('The') }
     },
     selected: {
-        type: boolean, default: false
+        type: Boolean, default: false
     }
+})
 
-}>()
-
+const emit = defineEmits({
+    selected(payload: string) {
+        return typeof payload === 'string'
+    }
+})
+function selectedPlan() {
+    emit('selected', props.name)
+}
 </script>
 <template>
-    <div class="plan" :class="{ 'active-plan': selected }">
+    <div @click="selectedPlan" class="plan" :class="{ 'active-plan': selected }">
         <div class="description">
             <span cla ss="title"> {{ name }} </span>
         </div>
