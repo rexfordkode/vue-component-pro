@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
+interface GithubUser {
+    name?: string;
+    avatar_url?: string;
+    followers?: number;
+    following?: number;
+    html_url?: string;
+    [key: string]: unknown;
+}
+
 const props = defineProps({
     username: {
         type: String,
@@ -7,7 +17,7 @@ const props = defineProps({
         default: 'rexfordkode'
     }
 })
-const users = ref({})
+const users = ref<GithubUser>({})
 
 fetch(`https://api.github.com/users/${props.username}`)
     .then((response) => response.json())

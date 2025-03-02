@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import CoffeePlan from './CoffeePlan.vue'
 const plans = ref([
     { name: 'The Curious' },

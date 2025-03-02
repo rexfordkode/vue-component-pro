@@ -20,7 +20,7 @@ function selectedPlan() {
 <template>
     <div @click="selectedPlan" class="plan" :class="{ 'active-plan': selected }">
         <div class="description">
-            <span cla ss="title"> {{ name }} </span>
+            <span class="title"> {{ name }} </span>
         </div>
     </div>
 </template>
